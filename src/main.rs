@@ -15,7 +15,7 @@ fn main() {
         println!("{} = {}", "version".blue(), "1.0".green());
         println!("{} = {}", "author".blue(), "\"Thebigbot\"".yellow());
         println!("{} = {}", "license".blue(), "\"NO-LICENSE\"".yellow());
-        println!("{} = {}", "you_are_cool".blue(), "true".red());
+        println!("{} = {}", "are_you_cool".blue(), "true".red());
         return;
     }
 

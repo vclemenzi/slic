@@ -3,5 +3,5 @@
 version = 1.0
 author = "Thebigbot"
 license = "NO-LICENSE"
-you_are_cool = true
+are_you_cool = true
 ```
