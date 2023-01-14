@@ -31,3 +31,17 @@ pub fn convert_to_json(string: &str) -> String {
 
     return json;
 }
+
+pub fn convert_to_yaml(string: &str) -> String {
+    let mut yaml = String::new();
+    
+    let lines: Vec<&str> = string.lines().collect();
+
+    for line in lines {
+        let result = analyze_string(line);
+
+        yaml.push_str(format!("{}: {}\n", result[0], result[1]).as_str());
+    }
+
+    return yaml;
+}

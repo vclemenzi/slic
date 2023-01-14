@@ -15,7 +15,6 @@ fn main() {
         println!("{} = {}", "version".blue(), "1.0".green());
         println!("{} = {}", "author".blue(), "\"Thebigbot\"".yellow());
         println!("{} = {}", "license".blue(), "\"NO-LICENSE\"".yellow());
-        println!("{} = {}", "math".blue(), "1 + 1".green());
         println!("{} = {}", "you_are_cool".blue(), "true".red());
         return;
     }
@@ -26,6 +25,10 @@ fn main() {
         match args[2].as_str() {
             "json" => {
                 fs::write("./compiled.json", analyzer::convert_to_json(&content)).expect("Unable to write file");
+            }
+
+            "yaml" => {
+                fs::write("./compiled.yaml", analyzer::convert_to_yaml(&content)).expect("Unable to write file");
             }
             _ => {
                 println!("Options: json or yaml")
